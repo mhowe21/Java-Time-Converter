@@ -103,8 +103,11 @@ public class App {
         System.out.println("Do you want to continue? (y/n)");
         String YN = scanYN.nextLine();
         if (YN.equalsIgnoreCase("y") || YN.equalsIgnoreCase("yes")) {
+            scanYN.close();
             return true;
+
         } else {
+            scanYN.close();
             return false;
 
         }
