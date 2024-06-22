@@ -47,7 +47,7 @@ public class App {
                 System.out.println("Current offset from GMT is: " + time.getOffset() + " from GMT");
                 keepGoing = shouldContinue();
                 System.out.println();
-                // this gets the offset from 2 diffrent timezones
+                // this gets the offset in hours from 2 diffrent timezones
             } else if (optionSelect == 4) {
                 System.out.print("Enter first time zone: ");
                 scan.nextLine();
@@ -71,9 +71,8 @@ public class App {
 
                 keepGoing = shouldContinue();
                 System.out.println();
-                // this prints out all valid timezones
+                // this prints out all valid timezones that can be used for step 4
             } else if (optionSelect == 5) {
-                // TimeZone tZone = TimeZone.getDefault();
                 System.out.println(ZoneId.getAvailableZoneIds());
                 Set<String> outPut1 = ZoneId.getAvailableZoneIds();
                 String outString = outPut1.toString();
@@ -107,6 +106,7 @@ public class App {
             return true;
         } else {
             return false;
+
         }
 
     }
